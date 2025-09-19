@@ -30,9 +30,18 @@ body {
   caret-color: var(--color-pointer);
 }
 
+/* Do not override link color globally; inherit so component classes (Tailwind) can control it */
 a {
-  color: var(--color-base);
+  color: inherit;
   text-decoration: none;
+}
+/* Ensure header links have proper default/hover colors even without utility classes */
+header a {
+  color: var(--foreground);
+  transition: color 0.2s ease;
+}
+header a:hover {
+  color: var(--color-pointer);
 }
 
 :focus-visible {
