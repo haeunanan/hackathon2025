@@ -11,7 +11,7 @@ export default function Header() {
           <Link href="/store" className="text-base font-medium text-[var(--foreground)] transition-colors hover:text-[var(--color-pointer)]">상점</Link>
           <Link href="/harvest" className="text-base font-medium text-[var(--foreground)] transition-colors hover:text-[var(--color-pointer)]">재배</Link>
           <Link href="/player-scores" className="text-base font-medium text-[var(--foreground)] transition-colors hover:text-[var(--color-pointer)]">점수</Link>
-          <Link href="/signup" className="text-base font-medium text-[var(--foreground)] transition-colors hover:text-[var(--color-pointer)]">로그인</Link>
+          <Link href="/login" className="text-base font-medium text-[var(--foreground)] transition-colors hover:text-[var(--color-pointer)]">로그인</Link>
         </nav>
       </div>
       <Link href="/settings" className="text-base font-medium text-[var(--foreground)] transition-colors hover:text-[var(--color-pointer)]">
