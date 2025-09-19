@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --color-pointer: #4cbd06;
+  --color-base: #000000;
+  --font-sans-ko-en: "Inter", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--color-base);
+  --font-sans: var(--font-sans-ko-en);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-ko-en);
+  accent-color: var(--color-pointer);
+  caret-color: var(--color-pointer);
+}
+
+a {
+  color: var(--color-base);
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-pointer);
+  outline-offset: 2px;
+}
+::selection {
+  background: color-mix(in srgb, var(--color-pointer) 30%, transparent);
+}
