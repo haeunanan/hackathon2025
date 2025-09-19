@@ -30,12 +30,18 @@ export default function LoginPage() {
     const base = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:4000";
 
     try {
-      const res = await fetch(`${base}/auth/login`, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        credentials: "include", // 서버가 설정하는 JWT 쿠키를 받기 위함
-        body: JSON.stringify({ email, password }),
-      });
+      // base 필요 없음. /api/* 로 보내면 Next가 4000으로 프록시
+      // src/app/login/page.tsx
+      // src/app/login/page.tsx
+      const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      credentials: 'include',
+      body: JSON.stringify({ email, password }),
+    });
+
+
+
 
       const text = await res.text();
       let data: any = {};
